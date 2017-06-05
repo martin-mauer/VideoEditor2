@@ -1,26 +1,118 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-Uo-N3H" userLabel="Player View" customClass="PlayerView" customModule="VideoEditor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iul-IL-4bM">
+                                        <rect key="frame" x="0.0" y="324" width="414" height="44"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="983-uo-6qW">
+                                                <rect key="frame" x="54" y="6.6666666666666856" width="280" height="31"/>
+                                                <connections>
+                                                    <action selector="beginScrubbing:" destination="BYZ-38-t0r" eventType="touchDown" id="g5V-aD-CT6"/>
+                                                    <action selector="endScrubbing:" destination="BYZ-38-t0r" eventType="touchCancel" id="NIN-yD-v6h"/>
+                                                    <action selector="endScrubbing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SvM-Z6-yDG"/>
+                                                    <action selector="endScrubbing:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="ng4-Ds-VuI"/>
+                                                    <action selector="scrub:" destination="BYZ-38-t0r" eventType="valueChanged" id="9kq-iG-dLW"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgw-sJ-h5h">
+                                                <rect key="frame" x="348" y="11" width="50" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="s9G-QQ-iUR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nc-Fo-cHM">
+                                                <rect key="frame" x="16" y="10" width="24" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="HOa-tn-hbw"/>
+                                                    <constraint firstAttribute="width" constant="24" id="cbb-Yj-X7y"/>
+                                                </constraints>
+                                                <state key="normal" image="tp_play_icon"/>
+                                                <state key="selected" image="tp_stop_icon"/>
+                                                <connections>
+                                                    <action selector="togglePlayPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wun-ze-gao"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="wgw-sJ-h5h" secondAttribute="trailing" constant="16" id="7Ad-QV-Ucg"/>
+                                            <constraint firstItem="983-uo-6qW" firstAttribute="centerY" secondItem="iul-IL-4bM" secondAttribute="centerY" id="FLm-t2-r5J"/>
+                                            <constraint firstItem="983-uo-6qW" firstAttribute="leading" secondItem="1Nc-Fo-cHM" secondAttribute="trailing" constant="16" id="TYh-HT-hLq"/>
+                                            <constraint firstItem="wgw-sJ-h5h" firstAttribute="leading" secondItem="983-uo-6qW" secondAttribute="trailing" constant="16" id="W7b-8v-wbE"/>
+                                            <constraint firstItem="1Nc-Fo-cHM" firstAttribute="centerY" secondItem="iul-IL-4bM" secondAttribute="centerY" id="aeF-kd-87J"/>
+                                            <constraint firstAttribute="height" constant="44" id="cCd-H6-IwR"/>
+                                            <constraint firstItem="1Nc-Fo-cHM" firstAttribute="leading" secondItem="iul-IL-4bM" secondAttribute="leading" constant="16" id="yGG-vc-kbR"/>
+                                            <constraint firstItem="wgw-sJ-h5h" firstAttribute="centerY" secondItem="iul-IL-4bM" secondAttribute="centerY" id="zNU-nb-9uY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iul-IL-4bM" secondAttribute="bottom" id="1BU-aH-f0P"/>
+                                    <constraint firstItem="iul-IL-4bM" firstAttribute="leading" secondItem="Df4-Uo-N3H" secondAttribute="leading" id="OPW-dD-vWy"/>
+                                    <constraint firstAttribute="trailing" secondItem="iul-IL-4bM" secondAttribute="trailing" id="kBV-ar-w9k"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jII-Tf-4NS" userLabel="Composition Debug View" customClass="CompositionDebugView" customModule="VideoEditor" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="368" width="414" height="368"/>
+                                <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Df4-Uo-N3H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Is-f9-4xY"/>
+                            <constraint firstAttribute="trailing" secondItem="Df4-Uo-N3H" secondAttribute="trailing" id="Exp-ZA-Qxa"/>
+                            <constraint firstItem="jII-Tf-4NS" firstAttribute="top" secondItem="Df4-Uo-N3H" secondAttribute="bottom" id="L3e-jm-Kax"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jII-Tf-4NS" secondAttribute="bottom" id="Lqg-RL-ZN5"/>
+                            <constraint firstItem="Df4-Uo-N3H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="coP-Qy-Tu0"/>
+                            <constraint firstItem="jII-Tf-4NS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fRH-Fz-eip"/>
+                            <constraint firstItem="jII-Tf-4NS" firstAttribute="height" secondItem="Df4-Uo-N3H" secondAttribute="height" id="fSj-YY-WvB"/>
+                            <constraint firstAttribute="trailing" secondItem="jII-Tf-4NS" secondAttribute="trailing" id="ydx-Su-X3s"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="compositionDebugView" destination="jII-Tf-4NS" id="025-hO-Zij"/>
+                        <outlet property="currentTimeLabel" destination="wgw-sJ-h5h" id="osn-Gs-8VF"/>
+                        <outlet property="playPauseButton" destination="1Nc-Fo-cHM" id="Zhr-xr-Hm7"/>
+                        <outlet property="playerView" destination="Df4-Uo-N3H" id="eTE-OL-NCs"/>
+                        <outlet property="scrubber" destination="983-uo-6qW" id="Kus-m5-uDa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36.231884057971016" y="139.4021739130435"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tp_play_icon" width="22" height="23"/>
+        <image name="tp_stop_icon" width="21" height="19"/>
+    </resources>
 </document>

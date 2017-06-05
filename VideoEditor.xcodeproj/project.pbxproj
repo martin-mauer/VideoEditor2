@@ -12,6 +12,16 @@
 		1ED7A75D1EE1FE1000B78977 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED7A75B1EE1FE1000B78977 /* Main.storyboard */; };
 		1ED7A75F1EE1FE1000B78977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED7A75E1EE1FE1000B78977 /* Assets.xcassets */; };
 		1ED7A7621EE1FE1000B78977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED7A7601EE1FE1000B78977 /* LaunchScreen.storyboard */; };
+		1ED7A77D1EE4862C00B78977 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED7A77C1EE4862C00B78977 /* PlayerView.swift */; };
+		1ED7A77F1EE4873800B78977 /* SimpleEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED7A77E1EE4873800B78977 /* SimpleEditor.swift */; };
+		1ED7A7811EE4A1FC00B78977 /* CompositionDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED7A7801EE4A1FC00B78977 /* CompositionDebugView.swift */; };
+		1ED7A7841EE4F84200B78977 /* sample_clip1.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1ED7A7821EE4F84200B78977 /* sample_clip1.m4v */; };
+		1ED7A7851EE4F84200B78977 /* sample_clip2.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1ED7A7831EE4F84200B78977 /* sample_clip2.mov */; };
+		1ED7A7881EE50AEF00B78977 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED7A7871EE50AEF00B78977 /* AVFoundation.framework */; };
+		1ED7A78A1EE50AFD00B78977 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED7A7891EE50AFD00B78977 /* CoreMedia.framework */; };
+		1ED7A78C1EE50B1100B78977 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED7A78B1EE50B1100B78977 /* CoreGraphics.framework */; };
+		1ED7A78E1EE50B6B00B78977 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED7A78D1EE50B6B00B78977 /* Photos.framework */; };
+		1ED7A7901EE50B7500B78977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED7A78F1EE50B7500B78977 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,16 @@
 		1ED7A75E1EE1FE1000B78977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1ED7A7611EE1FE1000B78977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ED7A7631EE1FE1000B78977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ED7A77C1EE4862C00B78977 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		1ED7A77E1EE4873800B78977 /* SimpleEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleEditor.swift; sourceTree = "<group>"; };
+		1ED7A7801EE4A1FC00B78977 /* CompositionDebugView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionDebugView.swift; sourceTree = "<group>"; };
+		1ED7A7821EE4F84200B78977 /* sample_clip1.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_clip1.m4v; sourceTree = "<group>"; };
+		1ED7A7831EE4F84200B78977 /* sample_clip2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = sample_clip2.mov; sourceTree = "<group>"; };
+		1ED7A7871EE50AEF00B78977 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1ED7A7891EE50AFD00B78977 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1ED7A78B1EE50B1100B78977 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1ED7A78D1EE50B6B00B78977 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		1ED7A78F1EE50B7500B78977 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED7A7901EE50B7500B78977 /* Foundation.framework in Frameworks */,
+				1ED7A78E1EE50B6B00B78977 /* Photos.framework in Frameworks */,
+				1ED7A78C1EE50B1100B78977 /* CoreGraphics.framework in Frameworks */,
+				1ED7A78A1EE50AFD00B78977 /* CoreMedia.framework in Frameworks */,
+				1ED7A7881EE50AEF00B78977 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +65,7 @@
 			children = (
 				1ED7A7561EE1FE1000B78977 /* VideoEditor */,
 				1ED7A7551EE1FE1000B78977 /* Products */,
+				1ED7A7861EE50AEF00B78977 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +86,25 @@
 				1ED7A75E1EE1FE1000B78977 /* Assets.xcassets */,
 				1ED7A7601EE1FE1000B78977 /* LaunchScreen.storyboard */,
 				1ED7A7631EE1FE1000B78977 /* Info.plist */,
+				1ED7A77C1EE4862C00B78977 /* PlayerView.swift */,
+				1ED7A77E1EE4873800B78977 /* SimpleEditor.swift */,
+				1ED7A7801EE4A1FC00B78977 /* CompositionDebugView.swift */,
+				1ED7A7821EE4F84200B78977 /* sample_clip1.m4v */,
+				1ED7A7831EE4F84200B78977 /* sample_clip2.mov */,
 			);
 			path = VideoEditor;
+			sourceTree = "<group>";
+		};
+		1ED7A7861EE50AEF00B78977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ED7A78F1EE50B7500B78977 /* Foundation.framework */,
+				1ED7A78D1EE50B6B00B78977 /* Photos.framework */,
+				1ED7A78B1EE50B1100B78977 /* CoreGraphics.framework */,
+				1ED7A7891EE50AFD00B78977 /* CoreMedia.framework */,
+				1ED7A7871EE50AEF00B78977 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +139,7 @@
 				TargetAttributes = {
 					1ED7A7531EE1FE1000B78977 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = NX8AL2SGXY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,6 +170,8 @@
 				1ED7A7621EE1FE1000B78977 /* LaunchScreen.storyboard in Resources */,
 				1ED7A75F1EE1FE1000B78977 /* Assets.xcassets in Resources */,
 				1ED7A75D1EE1FE1000B78977 /* Main.storyboard in Resources */,
+				1ED7A7841EE4F84200B78977 /* sample_clip1.m4v in Resources */,
+				1ED7A7851EE4F84200B78977 /* sample_clip2.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED7A77D1EE4862C00B78977 /* PlayerView.swift in Sources */,
 				1ED7A75A1EE1FE1000B78977 /* ViewController.swift in Sources */,
+				1ED7A7811EE4A1FC00B78977 /* CompositionDebugView.swift in Sources */,
+				1ED7A77F1EE4873800B78977 /* SimpleEditor.swift in Sources */,
 				1ED7A7581EE1FE1000B78977 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +311,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NX8AL2SGXY;
 				INFOPLIST_FILE = VideoEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Joel.VideoEditor;
+				PRODUCT_BUNDLE_IDENTIFIER = Joel.Sezzwho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -274,9 +324,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NX8AL2SGXY;
 				INFOPLIST_FILE = VideoEditor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Joel.VideoEditor;
+				PRODUCT_BUNDLE_IDENTIFIER = Joel.Sezzwho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -301,6 +352,7 @@
 				1ED7A7681EE1FE1000B78977 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
